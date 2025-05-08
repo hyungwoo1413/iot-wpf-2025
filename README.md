@@ -37,6 +37,7 @@ IoT 개발자 WPF 학습리포지토리 2025
         - DataAdapter : 좀더 간단하게 데이터를 처리해주는 객체
 
 7. 실행결과
+
     <img src="./image/wpf0001.png" width="600">
 
 8. `전통적인 C# 윈앱개발`과 차이가 없음
