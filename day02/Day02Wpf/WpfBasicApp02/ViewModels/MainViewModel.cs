@@ -1,50 +1,36 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
+﻿using Caliburn.Micro;
+using MahApps.Metro.Controls.Dialogs;
+using MySql.Data.MySqlClient;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WpfBasicApp02.Models;
 
-using WpfBasicApp02.Model;
-
-namespace WpfBasicApp02.ViewModel
+namespace WpfBasicApp02.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : Conductor<object>
     {
-        // 속성추가  get; set;
-        // ObservableCollection은 값이 바뀔 때마다 자동으로 UI에 반영된다. -> 리스트의 변형(변화를 감지할 수 있도록 처리된 클래스)
-        public ObservableCollection<Book> Books { get; set; }
-        // List<KeyValuePair<string, string>> divisions 의 변형
+        private IDialogCoordinator _dialogCoordinator; // 메시지박스, 다이얼로그 실행을 위한 변수
+
         public ObservableCollection<KeyValuePair<string, string>> Divisions { get; set; }
 
-        // 선택된값에 대한 멤버변수, 멤버변수는 _를 붙이거나, 소문자로 변수명을 시작
+        public ObservableCollection<Book> Books { get; set; }
+
         private Book _selectedBook;
-        // 선택된값에 대한 속성
+
         public Book SelectedBook
         {
-            // get { return _selectedBook; } 
-            get => _selectedBook; // 람다식
+            get => _selectedBook;
             set
             {
                 _selectedBook = value;
-                // 값이 변경된 것을 알아차리도록 해줘야함!!!
-                OnPropertyChanged(nameof(SelectedBook));
-
+                NotifyOfPropertyChange(() => SelectedBook);
             }
-
         }
-
 
         public MainViewModel()
         {
             LoadControlFromDb();
             LoadGridFromDb();
         }
-
-        // DB에서 콤보박스에 넣을 데이터를 불러오기
 
         private void LoadControlFromDb()
         {
@@ -80,10 +66,9 @@ namespace WpfBasicApp02.ViewModel
             } // conn.Close() 자동으로 호출됨
 
             Divisions = divisions;
-            OnPropertyChanged(nameof(Divisions)); // Divisions 속성값이 변경되었음을 알림
+            NotifyOfPropertyChange(() => Divisions); // Caliburn.Micro가 제공하는 메서드
         }
 
-        // DB에서 데이터 로드후 Books 속성에 집어넣기
         private void LoadGridFromDb()
         {
             // 1. 연결문자열(DB연결문자열은 필수)
@@ -106,7 +91,7 @@ namespace WpfBasicApp02.ViewModel
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         books.Add(new Book
                         {
@@ -128,16 +113,13 @@ namespace WpfBasicApp02.ViewModel
             } // conn.Close() 자동으로 호출됨
 
             Books = books;
-            OnPropertyChanged(nameof(Books));
+            NotifyOfPropertyChange(() => Books);
         }
 
-        // 속성값이 변경되면 이벤트를 발생
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged(string name)
+        public async void DoAction()
         {
-            // 기본적인 이벤트핸들러 파라미터와 동일(object sender, EventArgs e) PropertyChanged값이바뀌면 Invoke 호출해줘(PropertyChangedEventArgs(name))
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            await _dialogCoordinator.ShowMessageAsync(this, "데이터로드!", "로드");
         }
+
     }
 }
