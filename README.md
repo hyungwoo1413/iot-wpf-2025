@@ -42,6 +42,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 
 8. `전통적인 C# 윈앱개발`과 차이가 없음
 9. MahApps.Metro 방식 다이얼로그 처리
+
     <img src="./image/wpf0004.png" width="600">
 
 ### WPF MVVM
@@ -139,6 +140,7 @@ IoT 개발자 WPF 학습리포지토리 2025
     ```
 
 10. 실행결과
+    
     <img src="./image/wpf0005.png" width="600">
 
 ## 2일차
@@ -250,7 +252,10 @@ IoT 개발자 WPF 학습리포지토리 2025
 7. Models > Genre
 8. BookGenreViewModel DB처리 구현
 
-    <img src="./image/wpf0010.png" width="650">
+    https://github.com/user-attachments/assets/11ea0588-e56c-45c0-b66a-62d1c81e7f2f
+
+
+
 
 #### DB연결 CRUD 연습시 추가 필요사항
 - [ ] NLog로 각 기능 동작시 로그남기기. 공통화 작업
