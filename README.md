@@ -255,7 +255,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 7. Models > Genre(DivisionTbl) 모델 작업
 8. BookGenreViewModel DB처리 구현
 
-    https://github.com/user-attachments/assets/f74861e5-afb1-4d21-ae14-855b08d41608
+    <img src="./image/wpf0010.gif" width="600">
 
 
 ## 4일차
@@ -299,7 +299,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 ### MovieFinder 2025
 - 전체 UI: 다섯영역으로 구분
 
-<img src="./image/wpf0014.png" width="650">
+    <img src="./image/wpf0014.png" width="650">
 
 - 영화 즐겨찾기 앱
     - TMDB 사이트에서 제공하는 OpenAI로 데이터 가져오기
@@ -331,7 +331,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 4. MVVM 구조 초기 작업
 5. UI 구현
 
-<img src="./image/wpf0015.png" width="650">
+    <img src="./image/wpf0015.png" width="650">
 
 6. 로직구현
     1. TMDB API 사용 구현
@@ -342,6 +342,8 @@ IoT 개발자 WPF 학습리포지토리 2025
 8. 텍스트박스에서 엔터시 이벤트 발생 처리
 9. 텍스트박스 한글 입력 우선 처리
 10. 실행시 텍스트박스에 포커스하도록 처리
+
+    <img src="./image/wpf0016.gif" width="650">
 
 ## 6일차
 
