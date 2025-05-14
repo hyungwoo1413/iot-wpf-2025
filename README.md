@@ -257,7 +257,6 @@ IoT 개발자 WPF 학습리포지토리 2025
 
     <img src="./image/wpf0010.gif" width="600">
 
-
 ## 4일차
 
 ### DB연결 CRUD 연습(계속)
@@ -343,11 +342,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 9. 텍스트박스 한글 입력 우선 처리
 10. 실행시 텍스트박스에 포커스하도록 처리
 
-<<<<<<< HEAD
     <img src="./image/wpf0016.gif" width="650">
-=======
-    https://github.com/user-attachments/assets/467bcfe8-d60d-47ae-a185-04d29c8d5c51
->>>>>>> 2a11195936b43950d78d6dcb9db072c226dcc6b1
 
 ## 6일차
 
