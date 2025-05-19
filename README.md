@@ -145,6 +145,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 
     <img src="./image/wpf0005.png" width="600">
 
+
 ## 2일차
 
 ### MVVM Framework
@@ -195,6 +196,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 4. 이전작업 소스코드 복사, 네임스페이스 변경
 
     <img src="./image/wpf0007.png" width="600">
+
 
 ## 3일차 (05.12)
 
@@ -257,6 +259,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 
     <img src="./image/wpf0010.gif" width="600">
 
+
 ## 4일차
 
 ### DB연결 CRUD 연습(계속)
@@ -292,6 +295,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 ### DB연결 CRUD 실습
 - BooksView, BooksViewModel 작업 실습
 - 1일차 MVVM 내용, 오늘 학습한것 
+
 
 ## 5일차
 
@@ -344,6 +348,7 @@ IoT 개발자 WPF 학습리포지토리 2025
 
     <img src="./image/wpf0016.gif" width="650">
 
+
 ## 6일차
 
 ### MovieFinder 2025
@@ -368,3 +373,28 @@ IoT 개발자 WPF 학습리포지토리 2025
 7. 결과 화면
 
     <img src="./image/wpf0018.gif" width="650">
+
+
+## 7일차
+
+### 부산광역시 맛집 정보앱
+1. [데이터포털](https://data.go.kr) OpenAPI 신청
+2. WPF 프로젝트 생성
+3. NuGet 패키지 라이브러리 설치
+    - CommunityToolkit.Mvvm
+    - MahApps.Metro / MahApps.Metro.IconPacks
+    - Newtonsoft.Json
+    - CefSharp.Wpf.NETCore (플랫폼 x64로 변경)
+    - NLog
+    
+4. MVVM 초기화
+5. UI 디자인 및 구현
+
+    <img src="./image/wpf0019.gif" width="650">
+
+## 8일차
+
+### 부산광역시 맛집 정보앱
+1. 메인창내용을 구글맵창으로 이동
+2. CefSharp.Wpf로 구글맵 지도 표현
+3. 위도(Latitude), 경도(Longitude)
