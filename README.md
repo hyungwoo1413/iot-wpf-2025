@@ -512,6 +512,8 @@ IoT 개발자 WPF 학습리포지토리 2025
 - 실행화면
 
 
+https://github.com/user-attachments/assets/1941dd3c-33b5-437c-9490-273165d35bae
+
 
 스마트홈 조작영상
 
