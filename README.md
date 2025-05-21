@@ -517,6 +517,8 @@ https://github.com/user-attachments/assets/1941dd3c-33b5-437c-9490-273165d35bae
 
 스마트홈 조작영상
 
-<img src="./image/wpf0027.gif" width="650">
+
+https://github.com/user-attachments/assets/46f73af2-e938-4f5c-b723-da8ab8ce8317
+
 
 스마트홈 모니터링앱 동작영상
